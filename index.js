@@ -1,12 +1,19 @@
 let body=document.querySelector("body")
 console.log("chrome extension running");
 const re=new RegExp('David Dobrik','gi')
-let matches=document.documentElement.innerHTML.match(re)
+//let matches=document.documentElement.innerHTML.match(re)
 //let paragraphs=matches.getElementsByTagName('span');
-//var myAudio = new Audio(chrome.runtime.getURL("song.mp3"));
-for(elt of matches){
-   elt.style['background-color']="#FF00FF";
-}/*
+var myAudio = new Audio(chrome.runtime.getURL("song.mp3"));
+
+
+body.innerHTML=body.innerHTML.replace(re,"<span class='naughty'>$&</span>")
+
+
+
+document.getElementsByClassName("naughty").addEventListener("click",function(){
+   myAudio.play(); 
+});
+/*
  var myAudio = new Audio(chrome.runtime.getURL("song.mp3"));
  console.log(matches);
 
