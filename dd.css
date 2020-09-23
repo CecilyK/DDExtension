@@ -2,7 +2,7 @@
 .naughty:hover{
 	
     color: transparent;
-	background: linear-gradient(to right, rgb(101, 153, 153), rgb(244, 121, 31));
+	background: linear-gradient(to right, rgb(0, 0, 255),rgb(255,0,0),rgb(255,255,0),rgb(46,43,95),rgb(0,255,0));
 	animation:glow 1s 5;
 	background-size:200% 200%;
 	transition: linear all;
